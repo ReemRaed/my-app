@@ -1,0 +1,84 @@
+@import "../abstracts/Mixins.module.scss";
+@import "../abstracts/Variables.module.scss";
+
+%display {
+  display: flex;
+  justify-content: space-around;
+}
+%fontStyle
+{
+  color: $secondary-color;
+  font-size: $font-size;
+
+}
+.container {
+  margin-top: 10px;
+  background-color: #f8f8f9;
+}
+.roundedThumbnail {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 24px; 
+  height: 24px; 
+  position: relative;
+  display: flex;
+  direction: row;
+ 
+  Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mx(20px);
+}
+@media (min-width: $breakpoint-desktop) {
+  .card {
+    flex-direction: row;
+    border-radius: 50%;
+    @include mx(50px);
+  }
+}
+.image {
+  height: 100%;
+  border-radius: 8px;
+  margin: 5px;
+}
+.middle {
+  @include mx(6px);
+}
+.caption {
+  color: #b6b6b6;
+  text-align: center;
+  font-size: $font-size;
+  font-family: $font-style;
+  text-align: left;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+}
+.tags
+{
+  @extend %fontStyle;
+  @include mx(6px);
+}
+.likesNo {
+  @extend %fontStyle;
+  font-weight: bold;
+}
+.btnLike {
+  background-color: #f8f8f9;
+  border: none;
+  width: 3rem;
+}
+.comments
+{
+  color: #b6b6b6;
+  @include mx(6px);
+}

@@ -1,10 +1,10 @@
-import Posts from '@/Components/Posts/Posts';
+import PostsListing from '@/Components/PostsListing/PostsListing';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            <Posts/>
+            <PostsListing/>
         </div>
     );
 };
